@@ -1,0 +1,177 @@
+:root {
+    --ff-base: 'Overpass', sans-serif;
+    --fw-bold: 700;
+    --fw-regular: 400;
+
+    --clr-primary-orange: hsl(25, 97%, 53%);
+
+    --clr-neutral-very_dark_blue: hsl(216, 12%, 8%);
+    --clr-neutral-dark_blue: hsl(213, 19%, 18%);
+    --clr-neutral-medium_gray: hsl(216, 12%, 54%);
+    --clr-neutral-light_gray: hsl(217, 12%, 63%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+}
+
+*, *::before,m *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    font-size: 0.9375rem;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+input, textarea, button, select {
+    font: inherit;
+}
+
+body {
+    background-color: var(--clr-neutral-very_dark_blue);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: var(--ff-base);
+    margin: 0 1.5rem;
+}
+
+.component-card {
+    background-image: linear-gradient(
+        to bottom,
+        hsl(212, 18%, 16%),
+        hsl(220, 16%, 13%)
+      );
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    max-width: 375px;
+}
+
+.star-img {
+    background-color: var(--clr-neutral-dark_blue);
+    padding: 0.8rem;
+    border-radius: 50%;
+}
+
+.card-title {
+    color: var(--clr-neutral-white);
+}
+
+.card-description {
+    color: var(--clr-neutral-light_gray);
+    line-height: 1.5;
+    font-size: 0.88rem;
+}
+
+.button-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    ce
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.75rem;
+    width: 100%;
+}
+
+.card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(213, 19%, 18%);
+    color: var(--clr-neutral-light_gray);
+    font-size: var(--fw-bold);
+    border: none;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--clr-primary-orange);
+    margin: 0.75rem 0;
+    padding: 0.85rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: var(--fw-bold);
+    transition: 0.3s;
+}
+
+.card-btn:hover {
+    background-color: var(--clr-primary-orange);
+    color: white;
+    cursor: pointer;
+}
+
+.card-btn:focus {
+    background-color: var(--clr-neutral-light_gray);
+    color: white;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    cursor: pointer;
+    color: var(--clr-primary-orange);
+}
+
+.thank-you-card {
+    max-width: 375px;
+    background-image: linear-gradient(
+        to bottom,
+        hsl(212, 18%, 16%),
+        hsl(220, 16%, 13%)
+      );
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-neutral-dark_blue);
+    color: var(--clr-primary-orange);
+    border-radius: 1rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0.75rem;
+}
+
+.rating-style {
+    display: inline-block;
+    margin: 0 0.3rem;
+}
+
+.thank-you-title {
+    color: white;
+}
+
+.thank-you-description {
+    color: var(--clr-neutral-light_gray);
+    text-align: center;
+}
